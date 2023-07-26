@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New Hardware Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <p>Add New Hardware</p>
+        <span class="plus-icon" onclick="openDeviceTypeField()">+</span>
+      </div>
+      <div class="form hidden" id="deviceTypeForm">
+        <label for="device-type">Device Type:</label>
+        <input type="text" id="device-type" required>
+        <button class="add-button" onclick="openDeviceInventoryCard()">Add to Inventory</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px; /* Add some margin to separate the cards */
+  }
+
+  .card-content {
+    cursor: pointer;
+  }
+
+  .plus-icon {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .form {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+
+  .form label,
+  .form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  function openDeviceTypeField() {
+    const plusIcon = document.querySelector('.plus-icon');
+    const deviceTypeForm = document.getElementById('deviceTypeForm');
+    plusIcon.style.display = 'none';
+    deviceTypeForm.classList.remove('hidden');
+  }
+
+  function openDeviceInventoryCard() {
+    const deviceType = document.getElementById('device-type').value;
+    if (deviceType.trim() === '') {
+      alert('Please enter a valid Device Type.');
+      return;
+    }
+
+    const card = document.createElement('div');
+    card.classList.add('card'); // Add the "card" class to the new card
+
+    const cardContent = document.createElement('div');
+    cardContent.classList.add('card-content'); // Add the "card-content" class to the new card content
+
+    const title = document.createElement('p');
+    title.textContent = 'Add New Device To Inventory'; // Change the title for the new card
+
+    const plusIcon = document.createElement('span');
+    plusIcon.classList.add('plus-icon');
+    plusIcon.textContent = '+';
+
+    const form = document.createElement('div');
+    form.classList.add('form'); // Add the "form" class to the new card form
+
+    const deviceTypeLabel = document.createElement('label');
+    deviceTypeLabel.textContent = 'Device Type:';
+
+    const deviceTypeInput = document.createElement('input');
+    deviceTypeInput.setAttribute('type', 'text');
+    deviceTypeInput.setAttribute('id', 'new-device-type');
+    deviceTypeInput.setAttribute('required', 'true');
+
+    const submitButton = document.createElement('button');
+    submitButton.classList.add('add-button');
+    submitButton.textContent = 'Submit';
+    submitButton.onclick = function () {
+      submitNewDeviceForm(card);
+    };
+
+    form.appendChild(deviceTypeLabel);
+    form.appendChild(deviceTypeInput);
+    form.appendChild(submitButton);
+
+    cardContent.appendChild(title);
+    cardContent.appendChild(plusIcon);
+
+    card.appendChild(cardContent);
+    card.appendChild(form);
+
+    const container = document.querySelector('.container');
+    container.appendChild(card);
+
+    // Reset the "Add New Hardware" card to its initial state
+    const plusIconOriginal = document.querySelector('.plus-icon');
+    const deviceTypeForm = document.getElementById('deviceTypeForm');
+    plusIconOriginal.style.display = 'inline-block';
+    deviceTypeForm.classList.add('hidden'); // Hide the form
+    document.getElementById('device-type').value = '';
+  }
+
+  function submitNewDeviceForm(card) {
+    const deviceType = document.getElementById('new-device-type').value;
+    if (deviceType.trim() === '') {
+      alert('Please enter a valid Device Type.');
+      return;
+    }
+    function submitNewDeviceForm(card) {
+    const deviceTypeInput = document.getElementById('new-device-type');
+    const deviceType = deviceTypeInput.value;
+    if (deviceType.trim() === '') {
+      alert('Please enter a valid Device Type.');
+      return;
+    }
+
+    // Optionally, you can process the submitted data here...
+
+    // Clear the input field value and reset the form
+    deviceTypeInput.value = '';
+  }
+
+    // Optionally, you can remove the newly created card after submitting the form
+    // card.remove();
+  }
+</script>

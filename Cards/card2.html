@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add New User Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <p>Add New User</p>
+      <span class="plus-icon">+</span>
+    </div>
+    <div class="form hidden">
+      <label for="employee-id">Employee ID:</label>
+      <input type="text" id="employee-id" required>
+      <label for="set-password">Set Password:</label>
+      <input type="password" id="set-password" required>
+      <button class="add-button hidden">
+        <i class="fas fa-plus"></i>
+        <span>Add</span>
+      </button>
+    </div>
+    <button class="add-user-button hidden">
+      <i class="fas fa-plus"></i>
+      <span>Add User</span>
+    </button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+
+  .card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+  }
+
+  .card-content {
+    cursor: pointer;
+  }
+
+  .plus-icon {
+    font-size: 24px;
+    margin-left: 10px;
+  }
+
+  .add-user-button,
+  .add-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .add-button span {
+    margin-left: 10px;
+  }
+
+  .form {
+    margin-top: 20px;
+    margin-bottom: 40px; /* Add margin bottom to create space for the Add User button */
+  }
+
+  .form label,
+  .form input {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .hidden {
+    display: none;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const plusIcon = document.querySelector('.plus-icon');
+    const addButton = document.querySelector('.add-button');
+    const addUserButton = document.querySelector('.add-user-button');
+    const form = document.querySelector('.form');
+    const employeeIdInput = document.getElementById('employee-id');
+    const setPasswordInput = document.getElementById('set-password');
+
+    plusIcon.addEventListener('click', function() {
+      form.classList.toggle('hidden');
+      addUserButton.classList.toggle('hidden');
+      plusIcon.style.display = 'none'; // Hide the plus icon when the form opens
+    });
+
+    addButton.addEventListener('click', function() {
+      // Handle form submission logic here (e.g., sending data to server, processing data)
+
+      // Clear form fields and reset the card
+      employeeIdInput.value = '';
+      setPasswordInput.value = '';
+      form.classList.add('hidden');
+      addUserButton.classList.add('hidden');
+      plusIcon.style.display = 'inline-block'; // Show the plus icon again
+    });
+
+    addUserButton.addEventListener('click', function() {
+      // Reset the card to its initial state
+      form.classList.add('hidden');
+      addUserButton.classList.add('hidden');
+      plusIcon.style.display = 'inline-block'; // Show the plus icon again
+    });
+  });
+</script>

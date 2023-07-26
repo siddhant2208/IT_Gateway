@@ -1,0 +1,207 @@
+<!--assigning a device-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Device Assignment Card</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+  <div class="card">
+    <div class="card-content">
+      <p>Assigning a Device</p>
+      <span class="plus-icon">+</span>
+    </div>
+    <div class="form hidden">
+      <label for="device-type">Type:</label>
+      <div class="custom-select">
+        <span class="selected-device">Select a device</span>
+        <ul class="device-options">
+            <li data-value="laptop"><i class="fa fa-laptop"></i>Laptop</li>
+          <li data-value="mouse"><i class="fa-solid fa-computer-mouse"></i></i>Mouse</li>
+          <li data-value="keyboard"><i class="fa-solid fa-keyboard"></i>Keyboard</li>
+          <li data-value="charger"><i class="fa-solid fa-battery-three-quarters"></i>Charger</li>
+        </ul>
+      </div>
+      <div class="device-image">
+        <img src="" alt="" id="device-image-preview">
+      </div>
+      <label for="employee-id">Employee ID:</label>
+      <input type="text" id="employee-id" required>
+      <button id="submit-btn">Submit</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+<style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-content {
+  cursor: pointer;
+}
+
+.plus-icon {
+  font-size: 24px;
+  margin-left: 10px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.custom-select {
+  position: relative;
+  width: 100%;
+  cursor: pointer;
+}
+
+.custom-select .selected-device {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  display: block;
+}
+
+.custom-select .device-options {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  display: none;
+}
+
+.custom-select .device-options li {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.custom-select .device-options li:last-child {
+  border-bottom: none;
+}
+
+.custom-select .device-options li img {
+  margin-right: 10px;
+  width: 30px;
+  height: 30px;
+}
+
+.device-image img {
+  max-width: 100px;
+  display: block;
+  margin: 10px auto;
+}
+
+.form.hidden {
+  display: none;
+}
+.custom-select .device-options li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .custom-select .device-options li img {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+  }
+
+  /* Style the icons on the right */
+  .custom-select .device-options li i {
+    margin-left: 10px;
+  }
+
+  /* Add this CSS to position text on the left side */
+  .custom-select .device-options li span {
+    flex-grow: 1;
+    text-align: left;
+    margin-right: 10px;
+  }
+
+
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const plusIcon = document.querySelector('.plus-icon');
+    const form = document.querySelector('.form');
+    const customSelect = document.querySelector('.custom-select');
+    const selectedDevice = document.querySelector('.selected-device');
+    const deviceImagePreview = document.getElementById('device-image-preview');
+    const employeeIdInput = document.getElementById('employee-id');
+
+    customSelect.addEventListener('click', function() {
+      const deviceOptions = document.querySelector('.device-options');
+      deviceOptions.style.display = deviceOptions.style.display === 'none' ? 'block' : 'none';
+    });
+
+    const deviceOptions = document.querySelectorAll('.device-options li');
+    deviceOptions.forEach(function(option) {
+      option.addEventListener('click', function(event) {
+        const value = option.getAttribute('data-value');
+        selectedDevice.innerHTML = option.innerHTML;
+        
+        const iconClass = option.getAttribute('data-icon');
+        if (iconClass) {
+          deviceImagePreview.src = '';
+          const icon = document.createElement('i');
+          icon.className = iconClass;
+          deviceImagePreview.parentNode.replaceChild(icon, deviceImagePreview);
+        } else {
+          deviceImagePreview.src = option.querySelector('img').src;
+        }
+
+        customSelect.querySelector('.device-options').style.display = 'none';
+      });
+    });
+
+    plusIcon.addEventListener('click', function() {
+      form.classList.toggle('hidden');
+      // When the form is hidden, also hide the dropdown
+      customSelect.querySelector('.device-options').style.display = 'none';
+    });
+
+    const submitButton = document.getElementById('submit-btn');
+    submitButton.addEventListener('click', function(event) {
+      // Handle form submission logic here (e.g., sending data to server, processing data)
+
+      // Clear form fields and reset the card
+      selectedDevice.innerHTML = 'Select a device';
+      deviceImagePreview.src = '';
+      employeeIdInput.value = '';
+      form.classList.add('hidden');
+    });
+  });
+
+
+</script>
