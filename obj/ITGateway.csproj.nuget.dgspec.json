@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ITGateway\\ITGateway.csproj": {}
+    "C:\\Users\\Sana.gupta\\Desktop\\IT_Gateway-main\\ITGateway.csproj": {}
   },
   "projects": {
-    "D:\\ITGateway\\ITGateway.csproj": {
+    "C:\\Users\\Sana.gupta\\Desktop\\IT_Gateway-main\\ITGateway.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ITGateway\\ITGateway.csproj",
+        "projectUniqueName": "C:\\Users\\Sana.gupta\\Desktop\\IT_Gateway-main\\ITGateway.csproj",
         "projectName": "ITGateway",
-        "projectPath": "D:\\ITGateway\\ITGateway.csproj",
-        "packagesPath": "C:\\Users\\siddhant.mishra\\.nuget\\packages\\",
-        "outputPath": "D:\\ITGateway\\obj\\",
+        "projectPath": "C:\\Users\\Sana.gupta\\Desktop\\IT_Gateway-main\\ITGateway.csproj",
+        "packagesPath": "C:\\Users\\Sana.gupta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Sana.gupta\\Desktop\\IT_Gateway-main\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\siddhant.mishra\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Sana.gupta\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +25,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.305\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +62,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.305\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

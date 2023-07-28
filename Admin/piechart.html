@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="stylesheet" href="piechart.css" />
+    <!-- Bootstrap CSS -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav
+      class="navbar navbar-expand-sm navbar-dark bg-dark"
+      style="min-height: 10vh; box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5)"
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          src="https://cginfinity.com/wp-content/uploads/2022/04/cgi-logo.svg"
+          alt=""
+      /></a>
+      <ul class="navbar-nav ml-auto mr-0 mt-2 mt-lg-0">
+        <li class="nav-item d-flex flex-row-reverse dropdown">
+          <a
+            class="btn"
+            style="color: white"
+            type="button"
+            id="dropdownMenuButton"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+          >
+            <i class="fa-solid fa-user fa-xl"></i>
+          </a>
+          <div
+            class="dropdown-menu"
+            style="
+              box-shadow: 0 8px 8px -8px rgba(0, 0, 0, 0.5);
+              left: auto;
+              position: absolute;
+            "
+            aria-labelledby="dropdownMenuButton"
+          >
+            <a class="dropdown-item" href="#">User Name</a>
+            <a class="dropdown-item" href="#">User Id</a>
+            <hr />
+            <a class="dropdown-item" href="#"
+              ><i class="fa-solid fa-arrow-right-from-bracket"></i>Logout</a
+            >
+          </div>
+        </li>
+      </ul>
+    </nav>
+    <div class="main-content">
+      <div class="form-container">
+        <div class="form-heading">Assign a device from Inventory</div>
+        <div class="form-row">
+          <div class="form-field">
+            <label class="form-label" for="text-field">Emp Id:</label>
+            <input class="form-input" type="text" id="text-field" name="text-field" placeholder="Enter emp code here">
+          </div>
+          <div class="form-field">
+            <label class="form-label" for="dropdown1">Device Type:</label>
+            <select class="form-dropdown" id="dropdown1" name="dropdown1">
+              <option value="option1">Laptop</option>
+              <option value="option2">Charger</option>
+              <option value="option3">Mouse</option>
+              <option value="option3">Keyboard</option>
+            </select>
+            <label class="form-label" for="dropdown2">Specifications:</label>
+            <select class="form-dropdown" id="dropdown2" name="dropdown2">
+              <option value="option1">Mac</option>
+              <option value="option2">Mac Pro</option>
+              <option value="option3">Windows 8 gb ram</option>
+              <option value="option3">Windows 16 gb ram</option>
+            </select>
+          </div>
+        </div>
+        <button class="form-button" type="submit">Submit</button>
+      </div>
+      <div class="right">
+        <div id="color-dropdown">
+            <label for="colors">Select an option:</label>
+            <select id="colors" onchange="updateChart()">
+              <option value="option1">Laptop</option>
+              <option value="option2">Keyboard</option>
+              <option value="option3">Mouse</option>
+              <option value="option4">Charger</option>
+            </select>
+          </div>
+          <div id="chart-container">
+            <canvas id="myPieChart"></canvas>
+          </div>
+      </div>
+    </div>
+
+    <div class="container d-flex align-items-center justify-content-center flex-wrap">
+      <div class="box">
+          <div class="body">
+              <div class="imgContainer">
+                  <img src="https://images.pexels.com/photos/3601422/pexels-photo-3601422.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+              </div>
+              <div class="content d-flex flex-column align-items-center justify-content-center">
+                  <div>
+                      <h3 class="text-white fs-5">Post Title</h3>
+                      <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <div class="body">
+              <div class="imgContainer">
+                  <img src="https://images.pexels.com/photos/1532771/pexels-photo-1532771.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" alt="">
+              </div>
+              <div class="content d-flex flex-column align-items-center justify-content-center">
+                  <div>
+                      <h3 class="text-white fs-5">Post Title</h3>
+                      <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+          <div class="body">
+              <div class="imgContainer">
+                  <img src="https://images.pexels.com/photos/573238/pexels-photo-573238.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+              </div>
+              <div class="content d-flex flex-column align-items-center justify-content-center">
+                  <div>
+                      <h3 class="text-white fs-5">Post Title</h3>
+                      <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="box">
+        <div class="body">
+            <div class="imgContainer">
+                <img src="https://images.pexels.com/photos/573238/pexels-photo-573238.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260" alt="">
+            </div>
+            <div class="content d-flex flex-column align-items-center justify-content-center">
+                <div>
+                    <h3 class="text-white fs-5">Post Title</h3>
+                    <p class="fs-6 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo sed cum neque, rem provident ex. Laboriosam perspiciatis modi eveniet in?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div> 
+
+    <footer>
+      <h5>© 2023 CG Infinity. All rights reserved</h5>
+    </footer>
+
+    <script src="index.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
