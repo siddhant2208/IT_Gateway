@@ -9,12 +9,20 @@
       "PackagePath": "staticwebassets\\Images\\logo.png"
     },
     {
+      "Id": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\css\\Admin.css",
+      "PackagePath": "staticwebassets\\css\\Admin.css"
+    },
+    {
       "Id": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
       "Id": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\js\\Admin.js",
+      "PackagePath": "staticwebassets\\js\\Admin.js"
     },
     {
       "Id": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\js\\site.js",

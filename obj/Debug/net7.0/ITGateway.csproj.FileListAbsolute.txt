@@ -29,8 +29,8 @@ D:\ITGateway\obj\Debug\net7.0\refint\ITGateway.dll
 D:\ITGateway\obj\Debug\net7.0\ITGateway.pdb
 D:\ITGateway\obj\Debug\net7.0\ITGateway.genruntimeconfig.cache
 D:\ITGateway\obj\Debug\net7.0\ref\ITGateway.dll
-C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\appsettings.json
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\appsettings.json
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\ITGateway.staticwebassets.runtime.json
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\ITGateway.exe
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\ITGateway.deps.json
@@ -40,6 +40,9 @@ C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\ITGateway.pdb
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Azure.Core.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Azure.Identity.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Humanizer.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.AspNetCore.Server.Kestrel.Https.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
@@ -49,7 +52,9 @@ C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.EntityFramewor
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.Design.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.Design.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Extensions.Caching.SqlServer.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Extensions.Options.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Identity.Client.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
@@ -61,6 +66,7 @@ C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.IdentityModel.
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\Newtonsoft.Json.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\System.CodeDom.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
 C:\Users\nidhi\Desktop\IT_Gateway-main\bin\Debug\net7.0\System.Drawing.Common.dll

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Hf/X0iUmaHHbxSqO4umM1pU+jMq0Q4f7/PhNWU9/HQs=",
+  "Hash": "0GpWW0TdVefaJeLpxBvcalSFxP6ax7BzoRwPph7zWoE=",
   "Source": "ITGateway",
   "BasePath": "_content/ITGateway",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\ITGateway.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\css\\Admin.css",
+      "SourceId": "ITGateway",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\",
+      "BasePath": "_content/ITGateway",
+      "RelativePath": "css/Admin.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Admin.css"
     },
     {
       "Identity": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\css\\site.css",
@@ -100,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Images\\logo.png"
+    },
+    {
+      "Identity": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\js\\Admin.js",
+      "SourceId": "ITGateway",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\",
+      "BasePath": "_content/ITGateway",
+      "RelativePath": "js/Admin.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\Admin.js"
     },
     {
       "Identity": "C:\\Users\\nidhi\\Desktop\\IT_Gateway-main\\wwwroot\\js\\site.js",
